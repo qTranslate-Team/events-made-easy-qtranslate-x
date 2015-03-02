@@ -42,7 +42,7 @@ function qeme_add_admin_page_config($page_configs)
 	 * ['pages'] tested against $pagenow & $_SERVER['QUERY_STRING'] like preg_match('!'.$page.'!',$pagenow)
 	 * to enable use of regular expressions to identify pages, where fields need to become translatable.
 	*/
-	$page_config['pages'] = array( 'admin.php' => 'page=events-manager&eme_admin_action=edit_event' );
+	$page_config['pages'] = array( 'admin.php' => 'page=events-manager&eme_admin_action=edit_event|page=events-manager&eme_admin_action=edit_recurrence|page=eme-new_event' );
 
 	$page_config['anchors'] = array( 'titlediv', 'div_event_notes' );//id of elements, at front of which the Language Switching Buttons are placed
 
@@ -88,7 +88,23 @@ function qeme_add_admin_page_config($page_configs)
 	//and so on for forms
 
 	$page_configs[] = $page_config;
-	//and so on for pages
+
+        // for locations
+        $page_config = array();
+        $page_config['pages'] = array( 'admin.php' => 'page=eme-locations' );
+        $page_config['anchors'] = array( 'titlediv', 'loc_description' ); //id of elements, at front of which the Language Switching Buttons are placed
+        $page_config['forms'] = array();
+        $f = array();
+        $f['form'] = array( 'id' => 'editloc' ); //identify the form which fields described below belong to
+        $f['fields'] = array();
+        $fields = &$f['fields']; // shortcut
+        $fields[] = array( 'id' => 'title' );
+        $fields[] = array( 'id' => 'content' );
+        $fields[] = array( 'id' => 'location_address' );
+        $fields[] = array( 'id' => 'location_town' );
+        $page_config['forms'][] = $f;
+        $page_configs[] = $page_config;
+
 
 	return $page_configs;
 }
