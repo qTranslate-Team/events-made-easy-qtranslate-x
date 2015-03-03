@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Events Made Easy & qTranslate-X
- * Plugin URI: https://wordpress.org/plugins/events-made-easy_qtranslate-x
+ * Plugin URI: https://wordpress.org/plugins/events-made-easy-qtranslate-x
  * Description: Enables multilingual framework for plugin "Events Made Easy".
  * Version: 1.0
  * Author: qTranslate Team

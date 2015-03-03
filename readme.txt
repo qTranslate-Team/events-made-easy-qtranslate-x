@@ -1,7 +1,7 @@
 === Events Made Easy & qTranslate-X ===
 Developed by: qTranslate Team
 Contributors: johnclause, liedekef
-Tags: multilingual, language, bilingual, i18n, l10n, multilanguage, translation
+Tags: multilingual, language, bilingual, i18n, l10n, multilanguage, translation, Events Made Easy
 Requires at least: 4.0
 Tested up to: 4.1
 Stable tag: 1.0
