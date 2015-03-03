@@ -15,6 +15,8 @@ Enables multilingual framework for plugin "Events Made Easy".
 
 Enables [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/) multilingual framework for plugin [Events Made Easy](https://wordpress.org/plugins/events-made-easy/).
 
+At least version 3.2.2 of [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/) is required.
+
 == Installation ==
 
 Standard, as any other normal plugin hosted at WordPress.
