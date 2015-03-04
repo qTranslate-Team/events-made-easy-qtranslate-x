@@ -65,23 +65,82 @@ function qeme_add_admin_page_config($page_configs)
 	$page_configs[] = $page_config;
 	}
 
-	{// for locations
-	//admin.php?page=eme-locations&eme_admin_action=editlocation
-	$page_config = array();
-	$page_config['pages'] = array( 'admin.php' => 'page=eme-locations&eme_admin_action=editlocation' );
-	$page_config['anchors'] = array( 'titlediv', 'loc_description' ); //id of elements, at front of which the Language Switching Buttons are placed
-	$page_config['forms'] = array();
-	$f = array();
-	$f['form'] = array( 'id' => 'editloc' ); //identify the form which fields described below belong to
-	$f['fields'] = array();
-	$fields = &$f['fields']; // shortcut
-	$fields[] = array( 'id' => 'title' );
-	$fields[] = array( 'id' => 'content' );
-	$fields[] = array( 'id' => 'location_address' );
-	$fields[] = array( 'id' => 'location_town' );
-	$page_config['forms'][] = $f;
-	$page_configs[] = $page_config;
-	}
+        {// for locations
+        $page_config = array();
+        $page_config['pages'] = array( 'admin.php' => 'page=eme-locations&eme_admin_action=edit_location' );
+        $page_config['anchors'] = array( 'titlediv', 'loc_description' ); //id of elements, at front of which the Language Switching Buttons are placed
+        $page_config['forms'] = array();
+        $f = array();
+        $f['form'] = array( 'id' => 'editloc' ); //identify the form which fields described below belong to
+        $f['fields'] = array();
+        $fields = &$f['fields']; // shortcut
+        $fields[] = array( 'id' => 'title' );
+        $fields[] = array( 'id' => 'content' );
+        $fields[] = array( 'id' => 'location_address' );
+        $fields[] = array( 'id' => 'location_town' );
+        $page_config['forms'][] = $f;
+        $page_configs[] = $page_config;
+        }
+
+        {// for categories
+        $page_config = array();
+        $page_config['pages'] = array( 'admin.php' => 'page=eme-categories&eme_admin_action=edit_category' );
+        $page_config['anchors'] = array( 'category_name' ); //id of elements, at front of which the Language Switching Buttons are placed
+        $page_config['forms'] = array();
+        $f = array();
+        $f['form'] = array( 'id' => 'edit_category' ); //identify the form which fields described below belong to
+        $f['fields'] = array();
+        $fields = &$f['fields']; // shortcut
+        $fields[] = array( 'id' => 'category_name' );
+        $page_config['forms'][] = $f;
+        $page_configs[] = $page_config;
+        }
+
+        {// for templates
+        $page_config = array();
+        $page_config['pages'] = array( 'admin.php' => 'page=eme-templates&eme_admin_action=edit_template' );
+        $page_config['anchors'] = array( 'description' ); //id of elements, at front of which the Language Switching Buttons are placed
+        $page_config['forms'] = array();
+        $f = array();
+        $f['form'] = array( 'id' => 'edit_template' ); //identify the form which fields described below belong to
+        $f['fields'] = array();
+        $fields = &$f['fields']; // shortcut
+        $fields[] = array( 'id' => 'description' );
+        $fields[] = array( 'id' => 'format' );
+        $page_config['forms'][] = $f;
+        $page_configs[] = $page_config;
+        }
+
+        {// for formfields
+        $page_config = array();
+        $page_config['pages'] = array( 'admin.php' => 'page=eme-formfields&eme_admin_action=edit_formfield' );
+        $page_config['anchors'] = array( 'field_name' ); //id of elements, at front of which the Language Switching Buttons are placed
+        $page_config['forms'] = array();
+        $f = array();
+        $f['form'] = array( 'id' => 'edit_formfield' ); //identify the form which fields described below belong to
+        $f['fields'] = array();
+        $fields = &$f['fields']; // shortcut
+        $fields[] = array( 'id' => 'field_name' );
+        $fields[] = array( 'id' => 'field_info' );
+        $fields[] = array( 'id' => 'field_tags' );
+        $page_config['forms'][] = $f;
+        $page_configs[] = $page_config;
+        }
+
+        {// for mails
+        $page_config = array();
+        $page_config['pages'] = array( 'admin.php' => 'page=eme-send-mails' );
+        $page_config['anchors'] = array( 'subject' ); //id of elements, at front of which the Language Switching Buttons are placed
+        $page_config['forms'] = array();
+        $f = array();
+        $f['form'] = array( 'id' => 'send_mail' ); //identify the form which fields described below belong to
+        $f['fields'] = array();
+        $fields = &$f['fields']; // shortcut
+        $fields[] = array( 'id' => 'mail_subject' );
+        $fields[] = array( 'id' => 'mail_message' );
+        $page_config['forms'][] = $f;
+        $page_configs[] = $page_config;
+        }
 
 	return $page_configs;
 }
