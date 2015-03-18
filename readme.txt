@@ -1,4 +1,4 @@
-=== Events Made Easy & qTranslate-X ===
+# Events Made Easy & qTranslate-X #
 Developed by: qTranslate Team
 Contributors: johnclause, liedekef
 Tags: multilingual, language, bilingual, i18n, l10n, multilanguage, translation, Events Made Easy
@@ -11,31 +11,31 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Enables multilingual framework for plugin "Events Made Easy".
 
-== Description ==
+## Description ##
 
 Enables [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/) multilingual framework for plugin [Events Made Easy](https://wordpress.org/plugins/events-made-easy/).
 
 At least version 3.2.2 of [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/) is required.
 
-== Installation ==
+## Installation ##
 
 Standard, as any other normal plugin hosted at WordPress.
 
-== Screenshots ==
+## Screenshots ##
 
 Plugin does not have any configuration options, and no screenshots needed.
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 = How do I open a page with configuration options? = 
 
 Plugin does not have any configuration options, simply activate it and it will enable the translation of relevant fields for Events Made Easy back- and front-end.
 
-== Upgrade Notice ==
+## Upgrade Notice ##
 
 No need for Upgrade Notice.
 
-== Changelog ==
+## Changelog ##
 
-= 1.0 =
+### 1.0 ###
 * Initial release
